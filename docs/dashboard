@@ -1,0 +1,38 @@
+PinkCafe_Dashboard/
+├── app/
+│   ├── __init__.py
+│   └── app.py                          # Streamlit entrypoint — 6 pages
+├── data_access/
+│   ├── __init__.py
+│   └── loader.py                       # Multi-CSV load, melt wide→long, validate, clean
+├── services/
+│   ├── __init__.py
+│   ├── analytics.py                    # Weekly aggregation, product listing
+│   ├── forecasting.py                  # ETS model + baselines (with seasonality guard)
+│   ├── evaluation.py                   # Walk-forward validation + metrics
+│   ├── waste_analysis.py               # Buffer calc + waste avoided (with float precision fix)
+│   └── explainability.py               # Trend/seasonality/outlier detection
+├── tests/
+│   ├── __init__.py
+│   ├── test_loader.py
+│   ├── test_analytics.py
+│   ├── test_forecasting.py
+│   ├── test_evaluation.py
+│   ├── test_waste_analysis.py
+│   └── test_explainability.py
+├── data/                                # Real CSV files (Coffee + Croissant)
+├── docs/
+│   ├── requirements.md
+│   ├── gantt_chart.xlsx
+│   ├── risk_register.xlsx
+│   ├── test_plan.xlsx
+│   ├── literature_review.md
+│   ├── team_agreement.md
+│   └── minutes/
+│       ├── meeting_01.md
+│       ├── meeting_02.md
+│       ├── meeting_03.md
+│       └── meeting_04.md
+├── assets/                              # Screenshots for report
+├── requirements.txt
+└── README.md
